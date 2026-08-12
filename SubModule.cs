@@ -1,26 +1,20 @@
-﻿using TaleWorlds.MountAndBlade;
-
+﻿using Convoys.Behaviors; // Fixes 'ConvoySpawnerBehavior could not be found'
+using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
+using TaleWorlds.MountAndBlade;
 
 namespace Convoys
 {
     public class SubModule : MBSubModuleBase
     {
-        protected override void OnSubModuleLoad()
+        protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
         {
-            base.OnSubModuleLoad();
+            base.OnGameStart(game, gameStarterObject);
 
-        }
-
-        protected override void OnSubModuleUnloaded()
-        {
-            base.OnSubModuleUnloaded();
-
-        }
-
-        protected override void OnBeforeInitialModuleScreenSetAsRoot()
-        {
-            base.OnBeforeInitialModuleScreenSetAsRoot();
-
+            if (game.GameType is Campaign && gameStarterObject is CampaignGameStarter campaignGameStarter)
+            {
+                campaignGameStarter.AddBehavior(new ConvoySpawnerBehavior());
+            }
         }
     }
 }

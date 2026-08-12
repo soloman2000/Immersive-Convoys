@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PartyTemplates>
+	<PartyTemplate id="custom_convoy_template" mb_equipment_type="Caravan">
+		<stacks>
+			<!-- Reference the custom troop IDs created in Step 1 -->
+			<stack party_template_id="custom_convoy_guard" min_count="15" max_count="25"/>
+			<stack party_template_id="custom_convoy_archer" min_count="10" max_count="15"/>
+		</stacks>
+	</PartyTemplate>
+</PartyTemplates>

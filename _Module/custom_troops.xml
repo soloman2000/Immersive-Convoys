@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- Custom Convoy Guard -->
+	<NPCCharacter id="custom_convoy_guard"
+				  default_group="Infantry"
+				  level="21"
+				  name="{=!}Convoy Veteran Guard"
+				  occupation="Soldier"
+				  culture="Culture.empire">
+		<face>
+			<face_key_template value="NPCCharacter.infantry_empire" />
+		</face>
+		<skills>
+			<skill id="OneHanded" value="150" />
+			<skill id="Athletics" value="120" />
+			<skill id="Tactics" value="80" />
+		</skills>
+		<!-- Uses existing troop equipment roster or equipment set -->
+		<equipmentSet id="imperial_veteran_infantry_troops" />
+	</NPCCharacter>
+
+	<!-- Custom Convoy Marksman -->
+	<NPCCharacter id="custom_convoy_archer"
+				  default_group="Ranged"
+				  level="21"
+				  name="{=!}Convoy Sharpshooter"
+				  occupation="Soldier"
+				  culture="Culture.empire">
+		<face>
+			<face_key_template value="NPCCharacter.infantry_empire" />
+		</face>
+		<skills>
+			<skill id="Bows" value="160" />
+			<skill id="Athletics" value="110" />
+		</skills>
+		<equipmentSet id="imperial_palatine_guard_troops" />
+	</NPCCharacter>
+	<!-- Custom Royal Guard -->
+	<NPCCharacter id="custom_royal_guard"
+				  default_group="Infantry"
+				  level="31"
+				  name="{=!}Royal Elite Guard"
+				  occupation="Soldier"
+				  is_hero="false"
+				  culture="Culture.empire">
+		<face>
+			<face_key_template value="NPCCharacter.infantry_empire" />
+		</face>
+		<skills>
+			<skill id="OneHanded" value="220" />
+			<skill id="TwoHanded" value="200" />
+			<skill id="Polearm" value="220" />
+			<skill id="Athletics" value="180" />
+			<skill id="Tactics" value="100" />
+		</skills>
+		<!-- Uses high-tier Imperial Legionary equipment roster -->
+		<equipmentSet id="imperial_legionary_troops" />
+	</NPCCharacter>
+</NPCCharacters>
