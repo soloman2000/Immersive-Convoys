@@ -67,7 +67,7 @@ namespace Convoys.Scenarios
                     bootId = "plate_greaves";
                     weaponId = "vlandia_sword_4_t5";
                     shieldId = "vlandian_fortress_shield";
-                    horseId = "vlandia_horse";
+                    horseId = "charger";
                     harnessId = "vlandia_horse_harness_a";
                     break;
 
@@ -78,7 +78,7 @@ namespace Convoys.Scenarios
                     bootId = "sturgian_boots_a";
                     weaponId = "sturgia_sword_4_t5";
                     shieldId = "sturgian_heavy_shield";
-                    horseId = "sturgia_horse";
+                    horseId = "charger";
                     harnessId = "sturgia_horse_harness_a";
                     break;
 
@@ -89,7 +89,7 @@ namespace Convoys.Scenarios
                     bootId = "aserai_boots_a";
                     weaponId = "aserai_sword_3_t5";
                     shieldId = "aserai_heavy_shield";
-                    horseId = "aserai_horse";
+                    horseId = "charger";
                     harnessId = "aserai_horse_harness_a";
                     break;
 
@@ -100,7 +100,7 @@ namespace Convoys.Scenarios
                     bootId = "khuzait_boots_a";
                     weaponId = "khuzait_sword_4_t5";
                     shieldId = "khuzait_round_shield";
-                    horseId = "khuzait_horse";
+                    horseId = "charger";
                     harnessId = "khuzait_horse_harness_a";
                     break;
 
@@ -111,7 +111,7 @@ namespace Convoys.Scenarios
                     bootId = "battania_boots_a";
                     weaponId = "battania_sword_3_t5";
                     shieldId = "battanian_wood_shield";
-                    horseId = "battania_horse";
+                    horseId = "charger";
                     harnessId = "battania_horse_harness_a";
                     break;
 
@@ -120,18 +120,18 @@ namespace Convoys.Scenarios
                     bodyId = "imperial_scale_armor";
                     capeId = "imperial_lord_pauldrons";
                     gloveId = "mail_mitons";
-                    bootId = "strapped_leather_boots"; 
+                    bootId = "strapped_leather_boots";
                     weaponId = "empire_noble_sword";
                     shieldId = "imperial_heavy_shield";
-                    horseId = "imperial_charger";
-                    harnessId = "imperial_scale_harness";
+                    horseId = "charger";                  
+                    harnessId = "empire_horse_harness_a"; 
                     break;
             }
 
             // Explicitly leave head empty
             equipment[EquipmentIndex.Head] = EquipmentElement.Invalid;
 
-            // Load and assign body armor slots (Using "strapped_leather_boots" as safe fallback)
+            // Load and assign body armor slots
             AssignSlot(equipment, EquipmentIndex.Body, bodyId, "coat_of_plates");
             AssignSlot(equipment, EquipmentIndex.Cape, capeId, "imperial_lord_pauldrons");
             AssignSlot(equipment, EquipmentIndex.Gloves, gloveId, "mail_mitons");
@@ -142,8 +142,8 @@ namespace Convoys.Scenarios
             AssignSlot(equipment, EquipmentIndex.Weapon1, shieldId, "imperial_heavy_shield");
 
             // Load and assign horse and harness
-            AssignSlot(equipment, EquipmentIndex.Horse, horseId, "imperial_charger");
-            AssignSlot(equipment, EquipmentIndex.HorseHarness, harnessId, "imperial_scale_harness");
+            AssignSlot(equipment, EquipmentIndex.Horse, horseId, "empire_horse");
+            AssignSlot(equipment, EquipmentIndex.HorseHarness, harnessId, "empire_horse_harness_a");
 
             // Apply custom equipment configuration to hero
             hero.BattleEquipment.FillFrom(equipment);
